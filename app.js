@@ -3,20 +3,20 @@ require('dotenv/config'); //load the config file env, can be used by calling pro
 
 var express = require("express");
 const app = express();
-const MongoClient = require('mongodb').MongoClient;
-const client = new MongoClient(process.env.DB_CONNECTION,{ useUnifiedTopology: true, useNewUrlParser: true });
+// const MongoClient = require('mongodb').MongoClient;
+// const client = new MongoClient(process.env.DB_CONNECTION,{ useUnifiedTopology: true, useNewUrlParser: true });
 
 var bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
-// mongoose.connect(process.env.DB_CONNECTION,  { useUnifiedTopology: true, useNewUrlParser:true } , () => console.log('Connected to DB'));
+mongoose.connect(process.env.DB_CONNECTION,  { useUnifiedTopology: true, useNewUrlParser:true } , () => console.log('Connected to DB'));
 
-let fishes;
-client.connect(err => {
-  fishes = client.db("AM_Fish").collection("FishRegs");
-  console.log("Connected to database");
-  //    client.close();
-});
+// let fishes;
+// client.connect(err => {
+//   fishes = client.db("AM_Fish").collection("FishRegs");
+//   console.log("Connected to database");
+//   //    client.close();
+// });
 
 app.get('/', (req, res) => {
     res.send("we are at the homepage")
