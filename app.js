@@ -27,7 +27,7 @@ app.get("/ping", function (request, response) {
     response.json("Pong!");
   });
 
-  
+app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended:false}));
 const PORT = process.env.PORT || 8088; 
 
