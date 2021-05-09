@@ -1,10 +1,10 @@
 require('dotenv/config'); //load the config file env, can be used by calling process.env.{variableName} 
-const url = "mongodb+srv://Angler_User:89CL735AU@sit725.63pic.mongodb.net/AM_Fish?retryWrites=true&w=majority"
+// const url = "mongodb+srv://Angler_User:89CL735AU@sit725.63pic.mongodb.net/AM_Fish?retryWrites=true&w=majority"
 
 var express = require("express");
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
-const client = new MongoClient(url,{ useUnifiedTopology: true, useNewUrlParser: true });
+const client = new MongoClient(process.env.DB_CONNECTION,{ useUnifiedTopology: true, useNewUrlParser: true });
 
 var bodyParser = require("body-parser");
 const mongoose = require("mongoose");
