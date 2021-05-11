@@ -2,19 +2,77 @@
 <html lang="en">
 
 <head>
-   
+
 </head>
 
 <body>
     <header>
-      
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+            integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous"></script>
     </header>
     <main>
-<h1>This is Home</h1>
+
+        <div class="container">
+
+            <div class="row">
+                <h1>Angler Mate Location API</h1>
+            </div>
+            <h5>Getting started</h5>
+                <h6>The API requires an API key in the headers: 
+                     <pre>Key: authorization  Value: {apiKey}</pre></h6>
+            <div class="row">
+
+                <p> <code>GET</code> ALL Records: <b>Call => https://amlocatapi.us-south.cf.appdomain.cloud/location/</b><br>
+                </p>
+                    <br>
+                   
+            </div>
+            <div class="row">
+
+                <p><code>GET</code> BY ID: <b> Call => https://amlocatapi.us-south.cf.appdomain.cloud/location/<span>{ID}</span> </b><br>
+
+                </p>
+                <pre><span>Example: </span>https://amlocatapi.us-south.cf.appdomain.cloud/location/60991ca5f025547818598ab0</pre>
+            </div>
+            <div class="row">
+
+                <p> <code>GET</code> BY NAME: <b>Call => https://amlocatapi.us-south.cf.appdomain.cloud/location/name/<span>{NAME}</span> </b><br>
+                </p>
+               <pre> <span>Example: </span>https://amlocatapi.us-south.cf.appdomain.cloud/location/name/lungfish</pre>
+            </div>
+
+            <div class="row">
+
+                <p> <code>POST</code> INSERT A RECORD: <b>Call => https://amlocatapi.us-south.cf.appdomain.cloud/location/name/<span>{NAME}</span> </b><br>
+                </p>
+                <pre> <span>Example: </span>
+                   <B>POST TO</B> -> https://amlocatapi.us-south.cf.appdomain.cloud/location/
+
+                   <strong>This Json structure:</strong>
+
+                    {
+                    "fish": "Karp",
+                    "lat": 58.15,
+                    "long": 758.11,
+                    "url": "https://scienceinpoland.pap.pl/sites/default/files/styles/strona.png"
+                    }</pre>
+
+            </div>
+
+
+        </div>
+
 
     </main>
     <footer class="page-footer">
-       
+
     </footer>
 
 
