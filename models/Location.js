@@ -1,3 +1,4 @@
+const { Double } = require("bson");
 const { Decimal128 } = require("bson");
 const mongoose = require("mongoose");
 
@@ -7,11 +8,11 @@ const LocationSchema = mongoose.Schema({
     required: true,
   },
   lat: {
-    type: Decimal128,
+    type: Number,
     required: true,
   },
   long: {
-    type: Decimal128,
+    type: Number,
     required: true,
   },
   url: {
